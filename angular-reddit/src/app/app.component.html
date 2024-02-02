@@ -1,8 +1,24 @@
+
+<header class="header">
+  <div class="header__logo">ng-book</div>
+  <div class="header__title">Angular Simple Link Aggregator</div>
+</header>
 <div class="container">
-  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-    <p>Header</p>
-  </header>
   <main>
+    <div class="link-form">
+      <div class="link-form__title">Add a Link</div>
+      <div class="link-form__form-group">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-control" type="text" name="title" />
+      </div>
+      <div class="link-form__form-group">
+        <label class="form-label" for="title">Link</label>
+        <input class="form-control" type="text" name="link" />
+      </div>
+      <div class="link-form__button-group">
+        <button class="btn btn-success ms-auto">Submit Link</button>
+      </div>
+    </div>
     <app-article />
   </main>
 </div>
