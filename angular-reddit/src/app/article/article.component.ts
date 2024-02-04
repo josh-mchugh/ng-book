@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Article } from './article.model';
 
 @Component({
   selector: 'app-article',
@@ -8,5 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './article.component.css'
 })
 export class ArticleComponent {
+  @Input() article!: Article;
 
+  voteUp(): boolean {
+    this.article.voteUp();
+    return false;
+  }
+
+  voteDown(): boolean {
+    this.article.voteDown();
+    return false;
+  }
 }

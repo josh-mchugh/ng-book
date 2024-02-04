@@ -1,5 +1,6 @@
 .article {
   display: flex;
+  margin-bottom: 0.75rem;
 }
 
 .points {
@@ -32,7 +33,13 @@
 .content__title {
   font-size: 1.25rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.content__domain {
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: #6b7280;
 }
 
 .content__buttons {

@@ -9,16 +9,18 @@
       <div class="link-form__title">Add a Link</div>
       <div class="link-form__form-group">
         <label class="form-label" for="title">Title</label>
-        <input class="form-control" type="text" name="title" />
+        <input class="form-control" type="text" name="title" #newTitle />
       </div>
       <div class="link-form__form-group">
         <label class="form-label" for="title">Link</label>
-        <input class="form-control" type="text" name="link" />
+        <input class="form-control" type="text" name="link" #newLink />
       </div>
       <div class="link-form__button-group">
-        <button class="btn btn-success ms-auto">Submit Link</button>
+        <button class="btn btn-success ms-auto" type="button" (click)="addArticle(newTitle, newLink)">Submit Link</button>
       </div>
     </div>
-    <app-article />
+    @for(article of sortedArticles(); track $index; ) {
+      <app-article [article]="article" />
+    }
   </main>
 </div>

@@ -1,13 +1,14 @@
 <div class="article">
   <div class="points">
-    <div class="points__title">3</div>
+    <div class="points__title">{{ article.votes }}</div>
     <div class="points__subtitle">Points</div>
   </div>
   <div class="content">
-    <div class="content__title">Angular 2</div>
+    <div class="content__title">{{ article.title }}</div>
+    <div class="content__domain">{{ article.domain() }}</div>
     <div class="content__buttons">
-      <button class="btn btn-link btn-vote me-3" type="button">Upvote</button>
-      <button class="btn btn-link btn-vote" type="button">Downvote</button>
+      <button class="btn btn-link btn-vote me-3" type="button" (click)="voteUp()">Upvote</button>
+      <button class="btn btn-link btn-vote" type="button" (click)="voteDown()">Downvote</button>
     </div>
   </div>
 </div>
