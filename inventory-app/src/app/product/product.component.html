@@ -1,10 +1,10 @@
-<div class="product product--selected">
+<div class="product">
   <div class="product__image">
-    <img class="img--small" src="/assets/images/products/black-hat.jpg" />
+    <img class="img--small" [src]="product.imageUrl" />
   </div>
   <div class="product__content">
-    <div class="product-name">A Nice Black Hat</div>
-    <div class="product-sku">SKU #NICEHAT</div>
+    <div class="product-name">{{ product.name }}</div>
+    <div class="product-sku">SKU #{{ product.sku }}</div>
     <div class="product-department">
       <span class="product-department__break-crumb">
         <a class="breadcrumb__link">Men</a>
@@ -12,5 +12,5 @@
       </span>
     </div>
   </div>
-  <div class="product__price">$29.99</div>
+  <div class="product__price">${{ product.price }}</div>
 </div>

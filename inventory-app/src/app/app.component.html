@@ -4,6 +4,6 @@
 </header>
 <div class="container">
   @for(product of products; track product.sku;) {
-    <app-product />
+    <app-product [product]="product" />
   }
 </div>
