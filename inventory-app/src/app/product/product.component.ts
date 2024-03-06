@@ -10,4 +10,10 @@ import { Product } from './product.model';
 })
 export class ProductComponent {
   @Input() product!: Product;
+  isSelected = false;
+
+  onSelected(): boolean {
+    this.isSelected = !this.isSelected;
+    return false;
+  }
 }

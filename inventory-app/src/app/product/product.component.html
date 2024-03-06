@@ -1,4 +1,4 @@
-<div class="product">
+<div class="product" [class.product--selected]="isSelected" (click)="onSelected()">
   <div class="product__image">
     <img class="img--small" [src]="product.imageUrl" />
   </div>
@@ -6,10 +6,14 @@
     <div class="product-name">{{ product.name }}</div>
     <div class="product-sku">SKU #{{ product.sku }}</div>
     <div class="product-department">
-      <span class="product-department__break-crumb">
-        <a class="breadcrumb__link">Men</a>
-        <span class="breadcrumb__separator">/</span>
-      </span>
+      @for(name of product.department; track $index;) {
+        <span class="product-department__break-crumb">
+          <a class="breadcrumb__link">{{ name }}</a>
+          @if($index < product.department.length - 1) {
+            <span class="breadcrumb__separator">/</span>
+          }
+        </span>
+      }
     </div>
   </div>
   <div class="product__price">${{ product.price }}</div>
